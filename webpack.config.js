@@ -3,13 +3,13 @@ const path = require('path');
 module.exports = {
   entry: "./frontend/neatflix.jsx",
   output: {
-    path: path.resolve(__dirname),
+    path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
     filename: "./bundle.js"
   },
   module: {
     rules: [
       {
-        test: /\neatflix.jsx?$/,
+        test: /\.jsx?$/,
         exclude: /(node_modules)/,
         use: {
           loader: 'babel-loader',
