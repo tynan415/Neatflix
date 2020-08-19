@@ -8,7 +8,7 @@ class Session extends React.Component {
     render(){
         return 
         <div>
-            
+           <h1>Neatflix test</h1> 
         </div>
     }
 }
