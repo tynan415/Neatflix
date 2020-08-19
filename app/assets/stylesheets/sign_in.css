@@ -1,0 +1,41 @@
+
+
+.signIn-form {
+    display: flex;
+    justify-content: center;
+    height: 660px;
+    width: 450px;
+    margin: 0 0 90px 0;
+    padding: 60;
+    min-height: 660px;
+    min-width: 380px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background: black;
+    /* opacity: 0.9; */
+}
+
+.signIn-form > h1 {
+    display: flex;
+    color: white;
+    display: block;
+}
+
+.signIn {
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    width: 314px;
+    padding: 16px, 20px, 0, 20px;
+    border-radius: 4px;
+}
+
+#siBut {
+    /* display: flex; */
+    background-color: #E50914;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+}
