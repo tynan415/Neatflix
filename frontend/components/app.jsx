@@ -7,6 +7,7 @@ const App = () => (
       <h1>Neatflix</h1>
       <SessionContainer />
     </header>
+    <Route path="/" component={Session} />
   </div>
 );
 
