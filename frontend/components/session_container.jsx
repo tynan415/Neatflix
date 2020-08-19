@@ -3,9 +3,7 @@ import Session from './session.jsx';
 import { logout, login,  signup } from '../actions/session_actions'
 
 
-const mapStateToProps = ({ entities , session }) => ({
-    currentUser: entities.users[session.id]
-});
+
 
 const mapDispatchToProps = (dispatch) => ({
     signup: (user) => dispatch(signup(user)),
@@ -13,4 +11,4 @@ const mapDispatchToProps = (dispatch) => ({
     logout: () => dispatch(logout())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Session);
+export default connect(null, mapDispatchToProps)(Session);
