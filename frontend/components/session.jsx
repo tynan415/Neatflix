@@ -37,6 +37,7 @@ class Session extends React.Component {
                             type="text"
                             value={this.state.email} 
                             onChange={this.handleInput('email')}
+                            placeholder="email"
                         />
                     </label>
                     <label id="label">Password:
@@ -45,6 +46,7 @@ class Session extends React.Component {
                             type="password"  
                             value={this.state.password} 
                             onChange={this.handleInput('password')}
+                            placeholder="password"
                         />
                     </label>
                     <button className="signIn" id="siBut" onClick={this.handleSubmit}>Sign In</button>

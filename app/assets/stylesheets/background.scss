@@ -1,9 +1,12 @@
 
 #backGround {
     position: absolute;
-    height: 900px;
+    height: 1000px;
     width: 1900px;
-    background-image: image-url("background/Background.jpg");
+    top: 50%;
+    left: 50%;
+    box-sizing: border-box;
+    background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), image-url("background/Background.jpg");
     z-index: 0;
 }
 

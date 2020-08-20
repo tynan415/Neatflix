@@ -2,7 +2,7 @@
 
 .signIn-form {
     display: flex;
-    position: relative;
+    position: absolute;
     flex-direction: column;
     align-items: center;
     height: 660px;
@@ -12,9 +12,10 @@
     font-size: 16px;
     box-sizing: border-box;
     border-radius: 4px;
-    background: black;
-    top: 90px; left: 720px;
-    /* opacity: 0.9; */
+    background: rgba(0, 0, 0, 0.7);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .signIn-form > h1 {
@@ -27,6 +28,8 @@
 .signIn {
     position: relative;
     display: flex;
+    align-content: center;
+    justify-content: center;
     height: 50px;
     width: 314px;
     padding: 16px, 20px, 0, 20px;
@@ -34,13 +37,12 @@
 }
 
 #siBut {
-    /* display: flex; */
     position: relative;
+    top: 80px;
     background-color: #E50914;
     color: white;
     font-weight: 700;
     font-size: 16px;
     cursor: pointer;
-    text-align: center;
 }
 
