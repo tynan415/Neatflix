@@ -33,7 +33,7 @@ class Session extends React.Component {
                 <h1>Sign In</h1>
                     <label id="label">Email
                         <input
-                            class="signIn"
+                            className="signIn"
                             type="text"
                             value={this.state.email} 
                             onChange={this.handleInput('email')}
@@ -41,13 +41,13 @@ class Session extends React.Component {
                     </label>
                     <label id="label">Password:
                         <input
-                            class="signIn"
+                            className="signIn"
                             type="password"  
                             value={this.state.password} 
                             onChange={this.handleInput('password')}
                         />
                     </label>
-                    <button class="signIn" id="siBut" onClick={this.handleSubmit}>Sign In</button>
+                    <button className="signIn" id="siBut" onClick={this.handleSubmit}>Sign In</button>
                 </form>
             </div>
         )

@@ -1,0 +1,16 @@
+
+#backGround {
+    position: absolute;
+    height: 900px;
+    width: 1900px;
+    background-image: image-url("background/Background.jpg");
+    z-index: 0;
+}
+
+
+#gradient {
+    position: absolute;
+    z-index: 0;
+    background-color: rgb(0,0,0);
+    background-color: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(20,16,16,0.5095890410958904) 50%, rgba(0,0,0,1) 100%);
+}

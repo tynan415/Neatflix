@@ -2,25 +2,22 @@
 
 .signIn-form {
     display: flex;
-    justify-content: space-evenly;
+    position: relative;
     flex-direction: column;
     align-items: center;
-    position: absolute;
     height: 660px;
     width: 450px;
-    margin: 0 0 90px 0;
-    padding: 60;
     min-height: 660px;
     min-width: 380px;
     font-size: 16px;
     box-sizing: border-box;
     border-radius: 4px;
     background: black;
+    top: 90px; left: 720px;
     /* opacity: 0.9; */
 }
 
 .signIn-form > h1 {
-    /* position: relative; */
     font-size: 32px;
     display: flex;
     color: white;
@@ -30,7 +27,6 @@
 .signIn {
     position: relative;
     display: flex;
-    
     height: 50px;
     width: 314px;
     padding: 16px, 20px, 0, 20px;
