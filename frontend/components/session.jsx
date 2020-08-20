@@ -28,9 +28,9 @@ class Session extends React.Component {
 
     render() {
         return (
-            <div className="signIn-form">
+            <div >
+                <form className="signIn-form">
                 <h1>Sign In</h1>
-                <form >
                     <label id="label">Email
                         <input
                             class="signIn"
