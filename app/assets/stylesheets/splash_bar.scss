@@ -4,11 +4,13 @@
     height: 64px;
     width: 100%;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     z-index: 1;
 }
 .splash-bar button {
+    position: relative;
+    top: 22px;
+    left: 70%;
     background-color: #E50914;
     opacity: 1.0;
     color: floralwhite;
@@ -17,11 +19,14 @@
     font-size: 16px;
 }
 .splash-bar #logo {
+    position: relative;
+    top: 22px;
+    left: 29px;
     height: 45px;
     width: 167px;
     background-size: cover;
     background-image: image-url("logos/Neatflix.png");
-    left: 5%;
+   
 }
 
 
