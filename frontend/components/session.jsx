@@ -31,24 +31,22 @@ class Session extends React.Component {
             <div >
                 <form className="signIn-form">
                 <h1>Sign In</h1>
-                    <label id="label">Email
-                        <input
-                            className="signIn"
-                            type="text"
-                            value={this.state.email} 
-                            onChange={this.handleInput('email')}
-                            placeholder="email"
-                        />
-                    </label>
-                    <label id="label">Password:
-                        <input
-                            className="signIn"
-                            type="password"  
-                            value={this.state.password} 
-                            onChange={this.handleInput('password')}
-                            placeholder="password"
-                        />
-                    </label>
+                    <input
+                        className="signIn"
+                        id="email"
+                        type="text"
+                        value={this.state.email} 
+                        onChange={this.handleInput('email')}
+                        placeholder="email"
+                    />
+                    <input
+                        className="signIn"
+                        id="password"
+                        type="password"  
+                        value={this.state.password} 
+                        onChange={this.handleInput('password')}
+                        placeholder="password"
+                    />
                     <button className="signIn" id="siBut" onClick={this.handleSubmit}>Sign In</button>
                 </form>
             </div>

@@ -32,20 +32,28 @@
 .signIn {
     position: relative;
     display: flex;
-    top: 40px;
+    top: 50px;
     height: 50px;
     width: 314px;
     padding: 16px, 20px, 0, 20px;
     border-radius: 4px;
 }
 
+#password{
+    position: relative;
+    display: flex;
+    top: 70px;
+    height: 50px;
+}
+
 #siBut {
-    top: 80px;
+    top: 140px;
     background-color: #E50914;
     color: white;
     font-weight: 700;
     font-size: 16px;
     cursor: pointer;
-    
+    justify-content: center;
+    align-content: center;
 }
 
