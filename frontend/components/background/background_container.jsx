@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import Background from './background';
+import SplashPage from './background';
 
 const mSTP = (state) => ({
   
@@ -8,6 +8,6 @@ const mSTP = (state) => ({
 
 const mDTP = (dispatch) => ({
 
-})
+});
 
-export default connect(mSTP, mDTP)(Background);
+export default connect(mSTP, mDTP)(SplashPage);
