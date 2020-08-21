@@ -46,7 +46,7 @@
     height: 50px;
 }
 
-#siBut {
+#siBut { 
     top: 140px;
     background-color: #E50914;
     color: white;
@@ -54,6 +54,30 @@
     font-size: 16px;
     cursor: pointer;
     justify-content: center;
-    align-content: center;
+    line-height: 45px;
 }
 
+#newTo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color:  #737373;
+    position: fixed;
+    top: 400px;
+    left: 70px;
+}
+
+#SignUpNow {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: white;
+    position: fixed;
+    top: 400px;
+    left: 190px;
+    text-decoration: none;
+}
+
+#signUpNow:hover {
+    text-decoration: underline;
+    text-decoration-line: underline;
+    text-decoration-color: white;
+}
