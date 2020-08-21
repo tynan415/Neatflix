@@ -3,7 +3,6 @@ import SplashBar from './splash_bar';
 
 const mapStateToProps = (state) => ({
   
-    
 });
 
 const mDTP = (dispatch) => ({

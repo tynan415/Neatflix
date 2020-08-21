@@ -6,9 +6,9 @@ import background_container from "./background/background_container";
 
 const App = () => (
   <div>
+    <Route path="/" component={background_container} />
     <Route path="/" component={splash_bar_container} />
-    <Route patch="/" component={background_container} />
-    <Route path="/" component={SessionContainer} />
+    <Route path="/login" component={SessionContainer} />
   </div>
 );
 
