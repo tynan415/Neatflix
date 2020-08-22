@@ -76,9 +76,4 @@
     text-decoration: none;
 }
 
-#signUpNow:hover {
-    text-decoration-style: solid;
-    text-decoration: underline;
-    text-decoration-line: underline;
-    text-decoration-color: white;
-}
+
