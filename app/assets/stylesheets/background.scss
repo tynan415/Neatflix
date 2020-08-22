@@ -73,21 +73,24 @@
 
 #demoBut {
     position: relative;
-    
+    color: white;
     font-size: 19.2px;
     font-family: Arial, Helvetica, sans-serif;
     top:279px;
     left: 82%;
     background-color: transparent;
+    font-weight: 700;
 }
 #demoBut:hover {
-
+    text-decoration-color:  #E50914;
+    text-decoration-line: underline;
 }
 
 #getBut{
     position: absolute;
     font-size: 20px;
     background-color:  #E50914;
+    color: white;
     top: 500px;
     left: 723px;
     height: 60px;
