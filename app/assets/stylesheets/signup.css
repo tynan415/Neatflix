@@ -17,13 +17,47 @@
 
 .signUp-form > h1 {
     position: relative;
-    font-size: 32px;
+    font-size: 18px;
     font-weight: 700;
-    top: 30px;
-    right: 103px;
+    top: 90px;
     display: flex;
-    color: white;
+    color: rgb(15, 11, 11);
     display: block;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+#suBut{
+    position: relative;
+    top: 140px;
+    background-color: #E50914;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    justify-content: center;
+    line-height: 45px;
+    height: 45px;
+    width: 400px;
+    padding: 16px, 20px, 0, 20px;
+    
+}
+
+#passwordSu {
+    position: relative;
+    top: 90px;
+    font-size: 16px;
+    border: solid 1px #8c8c8c;
+    height: 45px;
+    width: 400px;
+}
+
+#headLine {
+    height: 1px;
+    position: absolute;
+    top: 10vh;
+    border: rgb(217, 220, 223);
+    border-width: 1px;
+    background-color: rgb(217, 220, 223);
+    width: 1px;
+    width: 100%;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { signup, login } from '../../util/session_api_util';
 class SignUp extends React.Component {
 
     constructor(props) {
@@ -27,10 +27,19 @@ class SignUp extends React.Component {
     render() {
         return (
             <div className="SignUp">
+                <div id="headLine"></div>
                 <form className="signUp-form">
+                <h1>enter your email</h1>
+                <input
+                        id="passwordSu"
+                        type="text"
+                        value={this.state.email} 
+                        onChange={this.handleInput('email')}
+                        placeholder="email"
+                    />
                     <h1>choose a password</h1>
                     <input
-                        id="password"
+                        id="passwordSu"
                         type="password"  
                         value={this.state.password} 
                         onChange={this.handleInput('password')}

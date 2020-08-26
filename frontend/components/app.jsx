@@ -4,6 +4,8 @@ import { Route, Switch } from 'react-router-dom';
 import splash_bar_container from "./nav_bar/splash_bar_container";
 import background_container from "./background/background_container";
 import SignUp from "./sign_up_comps/signup";
+import { AuthRoute } from '../util/route_utils'
+
 
 const App = () => (
   <div>
