@@ -48,7 +48,7 @@ class Session extends React.Component {
                         onChange={this.handleInput('password')}
                         placeholder="password"
                     />
-                    <button className="signIn" id="siBut" onClick={this.handleSubmit}>Sign In</button>
+                    <button id="sifBut" onClick={this.handleSubmit}>Sign In</button>
                     <p id="newTo">New to Neatflix?</p>
                         <Link id="SignUpNow" to={"/"}>Sign Up Now</Link>
                 </form>

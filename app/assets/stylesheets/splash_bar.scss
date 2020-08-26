@@ -33,4 +33,17 @@
 }
 
 
+#siBut {
+    position: absolute;
+    font-weight: 700;
+    color: #333;
+    top: 38px;
+    left: 88vw;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
+#siBut:hover {
+    text-decoration-line: underline;
+}

@@ -10,7 +10,6 @@
     font-size: 16px;
     box-sizing: border-box;
     border-radius: 4px;
-    background: rgba(0, 0, 0, 0.7);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -27,3 +26,4 @@
     display: block;
     font-family: Arial, Helvetica, sans-serif;
 }
+

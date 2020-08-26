@@ -46,7 +46,8 @@
     height: 50px;
 }
 
-#siBut { 
+#sifBut { 
+    position: relative;
     top: 140px;
     background-color: #E50914;
     color: white;
@@ -55,6 +56,10 @@
     cursor: pointer;
     justify-content: center;
     line-height: 45px;
+    height: 50px;
+    width: 314px;
+    padding: 16px, 20px, 0, 20px;
+    border-radius: 4px;
 }
 
 #newTo {

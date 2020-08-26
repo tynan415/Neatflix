@@ -7,9 +7,9 @@ class splashBar extends React.Component {
   render() {
     let butId;
     if (this.props.location.pathname !== "/"){
-      butId = "button";
-    } else {
       butId = "siBut";
+    } else {
+      butId = "button";
     }
 
     let button;
