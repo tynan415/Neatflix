@@ -4,9 +4,9 @@ import React from 'react';
 
 class HomePage extends React.Component {
     render() {
-        return null;
-        <div>
-            
+        return 
+        <div className="homePage" >
+
         </div>
     }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
-import { signup, login } from '../../util/session_api_util';
+
+
 class SignUp extends React.Component {
 
     constructor(props) {
