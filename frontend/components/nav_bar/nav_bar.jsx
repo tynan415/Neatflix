@@ -8,7 +8,12 @@ class NavBar extends React.Component {
         return(
             <div className="navBar" >
                 <div id="logo" />
-                
+                <input type="text" 
+                    id="search"
+                    placeholder="Titles, Genres"
+                />
+                <div className="usersPic" />
+
             </div>
         )
     }

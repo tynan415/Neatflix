@@ -1,8 +1,10 @@
 .navBar {
+    display: flex;
     position: absolute;
     height: 3.7vmax;
     width: 100vw;
     background-color: rebeccapurple;
+    flex-direction: row;
 }
 
 
@@ -15,5 +17,15 @@
     background-size: cover;
     background-image: image-url("logos/Neatflix.png");
     z-index: 1;
+    transform: translate(0, -50%);
+}
+
+#search {
+    width: 140px;
+    height: 20px;
+    position: relative;
+    left: 60%;
+    z-index: 1;
+    top: 50%;
     transform: translate(0, -50%);
 }
