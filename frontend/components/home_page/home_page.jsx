@@ -4,10 +4,16 @@ import React from 'react';
 
 class HomePage extends React.Component {
     render() {
-        return 
-        <div className="homePage" >
+        return (
+            <div className="homePage" >
 
-        </div>
+                <div className="topTen">
+                
+                </div>
+
+            </div>
+        )
     }
 }
 
+export default HomePage;

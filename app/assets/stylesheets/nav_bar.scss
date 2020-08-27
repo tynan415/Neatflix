@@ -1,0 +1,19 @@
+.navBar {
+    position: absolute;
+    height: 3.7vmax;
+    width: 100vw;
+    background-color: rebeccapurple;
+}
+
+
+.navBar #logo {
+    position: relative;
+    top:50%;
+    left: 29px;
+    height: 30px;
+    width: 90px;   
+    background-size: cover;
+    background-image: image-url("logos/Neatflix.png");
+    z-index: 1;
+    transform: translate(0, -50%);
+}
