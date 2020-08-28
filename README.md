@@ -1,24 +1,12 @@
-# README
+# NEATFLIX
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Neatflix is a place to stream all the shows and movies you love and perhaps find new content for your veiwing pleasure.
 
-Things you may want to cover:
+check it out here https://neatflix415.herokuapp.com/#/
 
-* Ruby version
+Neatflix uses ruby on rails backend, postgreSQL managment system for the database,
+a React/Redux front end, with extensive styling to create a friendly easy to use interface/user expierince.
 
-* System dependencies
 
-* Configuration
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
