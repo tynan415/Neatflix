@@ -4,21 +4,9 @@ Neatflix is a place to stream all the shows and movies you love and perhaps find
 
 check it out here https://neatflix415.herokuapp.com/#/
 
+Neatflix uses ruby on rails backend, postgreSQL managment system for the database,
+a React/Redux front end, with extensive styling to create a friendly easy to use user interface/expierince.
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
