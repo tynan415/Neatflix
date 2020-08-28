@@ -1,9 +1,9 @@
-# README
+# NEATFLIX
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Neatflix is a place to stream all the shows and movies you love and perhaps find new content for your veiwing pleasure.
 
-Things you may want to cover:
+check it out here https://neatflix415.herokuapp.com/#/
+
 
 * Ruby version
 
