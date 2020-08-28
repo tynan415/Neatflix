@@ -9,9 +9,10 @@
     position: relative;
     top:300px;
     left: 0;
+    padding-right: 10px;
     width: 100vw;
     height: 100vw;
-    z-index: 1;
+    z-index: 2;
     overflow-y: auto;
     overflow-x: scroll;
     white-space: nowrap;
@@ -21,11 +22,11 @@
     // transform:rotate(90deg) translateY(20px)
     // translateX(400px);
 }
+
 .topTen::-webkit-scrollbar {
     display: none;
-  }
+}
   
-
 .topTen > div {
     display: inline-block;
     width: 400px;
@@ -34,6 +35,5 @@
     background-color: #008AA5;
     z-index: 1;
     transform-origin: right top;
-    
     font-size: 100px;
 }

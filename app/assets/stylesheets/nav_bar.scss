@@ -1,10 +1,11 @@
 .navBar {
+    position: fixed;
     display: flex;
-    position: absolute;
     height: 3.7vmax;
     width: 100vw;
     background-color: rebeccapurple;
     flex-direction: row;
+    z-index: 0;
 }
 
 

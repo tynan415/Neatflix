@@ -11,7 +11,7 @@ import NavBar from './nav_bar/nav_bar'
 
 const App = () => (
   <div>
-    <Route exact path="/" component={background_container} />
+    <Route path="/" component={background_container} />
     <Route exact path="/" component={splash_bar_container} />
     <Route path="/login" component={SessionContainer} />
     <Route path="/signup" component={signup_cont} />
