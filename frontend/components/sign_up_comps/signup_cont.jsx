@@ -3,7 +3,7 @@ import SignUp from './signup.jsx';
 import { login,  signup } from '../../actions/session_actions'
 
 const mSTP = state => ({
-    
+    errors: state.errors.session
 })
 
 const mapDispatchToProps = (dispatch) => ({

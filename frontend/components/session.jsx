@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom';
 class Session extends React.Component {
     constructor(props) {
         super(props);
-        
-
+             
         this.state = {
             name: '',
             email: '',

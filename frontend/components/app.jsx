@@ -11,12 +11,12 @@ import NavBar from './nav_bar/nav_bar'
 
 const App = () => (
   <div>
-    <Route path="/" component={background_container} />
-    <Route path="/" component={splash_bar_container} />
-    <Route path="/login" component={SessionContainer} />
-    <Route path="/signup" component={signup_cont} />
-    <Route path="/browse" component={NavBar} />
-    <Route path="/browse" component={homePage} />
+    <AuthRoute path="/" component={background_container} />
+    <AuthRoute path="/" component={splash_bar_container} />
+    <AuthRoute path="/login" component={SessionContainer} />
+    <AuthRoute path="/signup" component={signup_cont} />
+    <ProtectedRoute path="/browse" component={NavBar} />
+    <ProtectedRoute path="/browse" component={homePage} />
   </div>
 );
 

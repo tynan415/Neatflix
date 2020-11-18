@@ -9,9 +9,12 @@ class SignUp extends React.Component {
         this.state = {
             name: '',
             email: '',
-            password: ''
+            password: '',
+            errors: []
         }
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.clearedErrors = false;
+        this.renderErrors =this.renderErrors.bind(this);
     }
     
     handleInput(type) {
@@ -25,6 +28,19 @@ class SignUp extends React.Component {
         this.props.signup(this.state)
     }
 
+    renderErrors(type) {
+        if (!this.props.errors) return null;
+
+        return this.props.errors.map((error, i) => {
+            if (error.includes(type)) {
+                return (<p className="passwordSu" key={i}>{error}</p>)
+            } else {
+                return null
+            }
+        })
+    }
+    
+
     render() {
         return (
             <div className="SignUp">
@@ -32,20 +48,22 @@ class SignUp extends React.Component {
                 <form className="signUp-form">
                 <h1>enter your email</h1>
                 <input
-                        id="passwordSu"
+                        className="passwordSu"
                         type="text"
                         value={this.state.email} 
                         onChange={this.handleInput('email')}
                         placeholder="email"
                     />
+                    {this.renderErrors("Email")}
                     <h1>choose a password</h1>
                     <input
-                        id="passwordSu"
+                        className="passwordSu"
                         type="password"  
                         value={this.state.password} 
                         onChange={this.handleInput('password')}
                         placeholder="password"
                     />
+                    {this.renderErrors("Password")}
                     <button id="suBut" onClick={this.handleSubmit}>Sign Up</button>
                 </form>
             </div>

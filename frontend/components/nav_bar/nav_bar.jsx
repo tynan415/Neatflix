@@ -13,7 +13,7 @@ class NavBar extends React.Component {
                     placeholder="Titles, Genres"
                 />
                 <div className="usersPic" />
-
+                <Link id="logOutBut" to="/">logout</Link>
             </div>
         )
     }
