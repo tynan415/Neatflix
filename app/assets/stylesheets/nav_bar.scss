@@ -30,3 +30,19 @@
     top: 50%;
     transform: translate(0, -50%);
 }
+
+
+#logOutBut {
+    position: relative;
+    background-color:black;
+    height: 30px;
+    width: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    border-radius: 4px;
+    left: 60%;
+    top: 20%;
+    text-align: center;
+    line-height: 25px;
+    color: #E50914;
+}

@@ -4,6 +4,15 @@ import { Link, Route } from 'react-router-dom';
 
 class NavBar extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+    
+    handleSubmit(e) {
+        this.props.logout()
+    }
+
     render() {
         return(
             <div className="navBar" >
@@ -13,7 +22,7 @@ class NavBar extends React.Component {
                     placeholder="Titles, Genres"
                 />
                 <div className="usersPic" />
-                <Link id="logOutBut" to="/">logout</Link>
+                <Link id="logOutBut" onClick={this.handleSubmit} to="/">logout</Link>
             </div>
         )
     }

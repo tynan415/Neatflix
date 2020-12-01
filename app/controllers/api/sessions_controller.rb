@@ -1,13 +1,9 @@
-class SessionsController < ApplicationController
+class Api::SessionsController < ApplicationController
     before_action :require_logged_in, only: [:destroy]
    
     def destroy
-        if @current_user
             logout!
-            render json: {}
-        else
-            render json: ['there is no current user'], status: 404
-        end
+            # render json: ['there is no current user'], status: 404
     end
 
     def create

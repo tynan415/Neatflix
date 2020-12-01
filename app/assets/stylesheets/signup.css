@@ -41,6 +41,11 @@
     padding: 16px, 20px, 0, 20px;
     
 }
+.errors {
+    font-size: larger;
+    position: relative;
+    top: 90px;
+}
 
 .passwordSu {
     position: relative;

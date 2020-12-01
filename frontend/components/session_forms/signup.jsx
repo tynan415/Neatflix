@@ -2,12 +2,10 @@ import React from 'react';
 
 
 class SignUp extends React.Component {
-
     constructor(props) {
         super(props);
 
         this.state = {
-            name: '',
             email: '',
             password: '',
             errors: []
@@ -25,6 +23,7 @@ class SignUp extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        console.log(this.props.signup)
         this.props.signup(this.state)
     }
 
@@ -33,13 +32,16 @@ class SignUp extends React.Component {
 
         return this.props.errors.map((error, i) => {
             if (error.includes(type)) {
-                return (<p className="passwordSu" key={i}>{error}</p>)
+                return (<p className="errors" key={i}>{error}</p>)
             } else {
                 return null
             }
         })
     }
-    
+
+    // componentWillUnmount(){
+    //     this.props.clearErrors();
+    // }
 
     render() {
         return (
