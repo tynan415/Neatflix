@@ -1,29 +1,29 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
+// import React from 'react';
+// import { Link } from 'react-router-dom'
 
 
-class splashBar extends React.Component {
+// class splashBar extends React.Component {
 
-  render() {
-    let butId;
-    if (this.props.location.pathname !== "/"){
-      butId = "siBut";
-    } else {
-      butId = "button";
-    }
+//   render() {
+//     let butId;
+//     if (this.props.location.pathname !== "/"){
+//       butId = "siBut";
+//     } else {
+//       butId = "button";
+//     }
 
-    let button;
-    if (this.props.location.pathname !== "/login"){
-      button = <Link id={butId} to="/login">Sign In</Link>
-    }
+//     let button;
+//     if (this.props.location.pathname !== "/login"){
+//       button = <Link id={butId} to="/login">Sign In</Link>
+//     }
 
-    return (
-      <header className="splash-bar">
-        <div id="logo" />
-        {button}
-      </header>
-    )
-  }
-}
+//     return (
+//       <header className="splash-bar">
+//         <div id="logo" />
+//         {button}
+//       </header>
+//     )
+//   }
+// }
 
-export default splashBar;
+// export default splashBar;

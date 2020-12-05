@@ -7,7 +7,8 @@
     align-items: center;
     z-index: 1;
 }
-.splash-bar #button {
+
+#button {
     position: absolute;
     top: 38px;
     left: 88vw;
@@ -21,17 +22,19 @@
     font-size: 16px;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
+    z-index: 6;
 }
-.splash-bar #logo {
-    position: relative;
+
+#logo {
+    position: absolute;
     top: 22px;
     left: 29px;
     height: 45px;
     width: 167px;
     background-size: cover;
     background-image: image-url("logos/Neatflix.png");
+    z-index: 10;
 }
-
 
 #siBut {
     position: absolute;

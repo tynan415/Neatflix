@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Session from './session.jsx';
+import SignIn from './signIn.jsx';
 import { logout, login,  signup } from '../../actions/session_actions'
 
 const mapStateToProps = (state) => ({
@@ -12,4 +12,4 @@ const mapDispatchToProps = (dispatch) => ({
     logout: () => dispatch(logout())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Session);
+export default connect(mapStateToProps, mapDispatchToProps)(SignIn);

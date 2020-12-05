@@ -6,13 +6,13 @@ class SignUp extends React.Component {
         super(props);
 
         this.state = {
-            email: '',
+            email: this.props.email ? this.props.email : '',
             password: '',
             errors: []
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.clearedErrors = false;
-        this.renderErrors =this.renderErrors.bind(this);
+        this.renderErrors = this.renderErrors.bind(this);
     }
     
     handleInput(type) {
@@ -23,7 +23,6 @@ class SignUp extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        console.log(this.props.signup)
         this.props.signup(this.state)
     }
 
@@ -44,6 +43,7 @@ class SignUp extends React.Component {
     // }
 
     render() {
+        // debugger
         return (
             <div className="SignUp">
                 <div id="headLine"></div>
