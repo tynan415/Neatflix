@@ -10,6 +10,7 @@ class NavBar extends React.Component {
     }
     
     handleSubmit(e) {
+        e.preventDefault();
         this.props.logout()
     }
 

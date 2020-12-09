@@ -29,7 +29,7 @@ class SignIn extends React.Component {
 
     renderErrors() {
         if (!this.props.errors) return null;
-        return (<p className="errors" >{this.props.errors[0]}</p>)
+        return (<p className="errorsIn" >{this.props.errors[0]}</p>)
     }
 
     render() {

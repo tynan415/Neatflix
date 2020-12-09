@@ -5,6 +5,7 @@ class Api::UsersController < ApplicationController
     end
 
     def show
+        @user = selected_user
     end
 
     def create 
@@ -20,7 +21,7 @@ class Api::UsersController < ApplicationController
 
     private
     def user_params
-        params.require(:user).permit(:email, :name, :password)
+        params.require(:user).permit(:email, :password)
     end
 
 end
