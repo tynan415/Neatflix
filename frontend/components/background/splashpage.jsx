@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 
 class SplashPage extends React.Component {
     constructor(props) {
@@ -36,7 +36,8 @@ class SplashPage extends React.Component {
             email: 'demoUser',
             password: 'password'
         }
-        this.props.login(demoUser);
+        this.props.login(demoUser)
+        
     }
     
     render() {
@@ -82,7 +83,7 @@ class SplashPage extends React.Component {
             <div id="gradient">
                 <div id="logo" />
                 
-                    <Link id="button" to="/login">Sign In</Link>
+                    <Link id="siBut" to="/login">Sign In</Link>
                
                 <div id={backId}/>
                 {welcome}

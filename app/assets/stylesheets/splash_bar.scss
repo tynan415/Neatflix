@@ -8,23 +8,6 @@
     z-index: 1;
 }
 
-#button {
-    position: absolute;
-    top: 38px;
-    left: 88vw;
-    background-color: #E50914;
-    opacity: 1.0;
-    color: floralwhite;
-    border-radius: 4px;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 16px;
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    z-index: 6;
-}
-
 #logo {
     position: absolute;
     top: 22px;
@@ -38,15 +21,18 @@
 
 #siBut {
     position: absolute;
-    font-weight: 700;
-    color: #333;
-    top: 48px;
+    top: 38px;
     left: 88vw;
+    background-color: #E50914;
+    opacity: 1.0;
+    width: 50px;
+    color: floralwhite;
+    border-radius: 4px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     font-size: 16px;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-#siBut:hover {
-    text-decoration-line: underline;
+    z-index: 6;
 }

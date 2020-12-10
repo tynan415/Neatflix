@@ -1,11 +1,12 @@
 import React from 'react';
-
+import NavBar from '../nav_bar/nav_bar';
 
 
 class HomePage extends React.Component {
     render() {
         return (
             <div className="homePage" >
+                <NavBar logout={this.props.logout} />
 
                 <div className="topTen">
                     <div>1</div>

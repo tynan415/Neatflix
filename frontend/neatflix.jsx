@@ -12,9 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     }
-
+    
+    // debugger
     const store = configureStore(preloadedState);
     const root = document.getElementById("root");
-
+    window.getState = store.getState()
     ReactDOM.render(<Root store={store} />, root);
 });
