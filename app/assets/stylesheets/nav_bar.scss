@@ -3,11 +3,10 @@
     display: flex;
     height: 3.7vmax;
     width: 100vw;
-    background-color: rebeccapurple;
+    background-color: black;
     flex-direction: row;
-    z-index: 0;
+    z-index: 10;
 }
-
 
 .navBar #logo {
     position: relative;
@@ -21,16 +20,15 @@
     transform: translate(0, -50%);
 }
 
-#search {
+.search {
     width: 140px;
     height: 20px;
     position: relative;
-    left: 60%;
+    left: 70%;
     z-index: 1;
     top: 50%;
     transform: translate(0, -50%);
 }
-
 
 #logOutBut {
     position: relative;
@@ -40,7 +38,7 @@
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     border-radius: 4px;
-    left: 60%;
+    left: 75%;
     top: 20%;
     text-align: center;
     line-height: 25px;

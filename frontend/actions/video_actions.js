@@ -3,7 +3,7 @@ import *  as VideoApiUtil from '../util/videos_api_util';
 export const RECEIVE_VIDEO = 'RECEIVE_VIDEO';
 export const RECEIVE_ALL_VIDEOS = 'RECEIVE_ALL_VIDEOS';
 
-const receiveAllVideos = videos =>({
+const receiveAllVideos = videos => ({
     type: RECEIVE_ALL_VIDEOS,
     videos
 });
@@ -18,7 +18,7 @@ export const requestVideo = (videoId) => dispatch => (
     .then((video) => dispatch(receiveVideo(video)))
 );
 
-export const requestVideos = () => dispatch =>(
-    VideoApiUtil.fetchAllVideos()
+export const requestVideos = () => dispatch => (
+    VideoApiUtil.fetchVideos()
     .then((videos) => dispatch(receiveAllVideos(videos)))
 );

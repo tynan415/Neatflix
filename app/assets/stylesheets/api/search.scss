@@ -1,0 +1,30 @@
+.searchComp {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.searchDisplay {
+    display: flex;
+    justify-content: flex-start;
+    width: 90vw;
+    height: 90vh;
+}
+
+
+.searchItem {
+    position: relative;
+    padding: 10px;
+    margin: 20px;
+    top: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    color: red;
+    flex-grow: 5;
+}
+

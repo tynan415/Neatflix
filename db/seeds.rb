@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Video.destroy_all
+LordoftheRings = Video.create!({title: "Lord of the Rings", description: "one Ring to rule them all"})
+StarWars = Video.create!({title: "Star Wars", description: "fully operational battle station"})
+TheDarkKnight = Video.create!({title: "The Dark Knight", description: "The hero we deserve"})
+Seven = Video.create!({title: "Se7en", description: "whats in the box"})
