@@ -5,6 +5,11 @@ class User < ApplicationRecord
     validates :password, length: {minimum: 6, allow_nil: true}
     attr_reader :password
 
+    has_many :lists,
+        primary_key: :id,
+        foreign_key: :user_id,
+        class_name: :My_list
+        
     def password=(password)
         @password = password
         self.password_digest = BCrypt::Password.create(password)

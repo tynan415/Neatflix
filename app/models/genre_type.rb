@@ -1,5 +1,5 @@
 class GenreType < ApplicationRecord
-    validates :name
+    validates :name, presence: true
 
     has_many :video_genres,
         foreign_key: :genre_type_id,

@@ -13,7 +13,7 @@
   z-index: 1;
 }
 
-.previewBox > video {
+.previewBox video {
   position: absolute;
   top: 0%;
   left: 0%;
@@ -62,12 +62,22 @@
   z-index: 1;
   margin-left: 10px;
   margin-top: 50px;
+  object-fit: contain;
+}
+
+.videoComp img {
+  width: 300px;
+  height: 200px;
+  z-index: 1;
+ 
 }
 
 .genre {
   left: 70px;
   color:white;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 40px;
+  font-weight: 600;
   z-index: 7;
   position: absolute;
 }

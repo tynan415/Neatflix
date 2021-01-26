@@ -9,10 +9,12 @@ class Video extends React.Component {
 
     render() {
         return (
-            <div className={this.props.pos}>
-                <video controls>
+            <div className="videoComp" >
+                <img src={this.props.img}/>
+                {/* <video controls>
                     <source src={this.props.src} type="video/mp4" />
-                </video>
+                </video> */}
+
             </div>
         )
     }

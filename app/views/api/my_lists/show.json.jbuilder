@@ -1,0 +1,1 @@
+json.partial! "api/my_lists/mylist", list: @mylist
