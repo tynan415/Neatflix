@@ -1,14 +1,16 @@
 import React from 'react';
-import NavBar from '../nav_bar/nav_bar';
 import Video from './video';
+import MyList from '../my_list/my_list_container';
 
 class HomePage extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
+        this.myRef = React.createRef();
         this.state = {
             videos: [],
-            genreType: []
+            genreType: [],
         }
+        this.plusSlides = this.plusSlides.bind(this)
     }
 
     componentDidMount() {
@@ -16,6 +18,34 @@ class HomePage extends React.Component {
         this.props.requestGenres()
     }
 
+
+
+    // buttonRight = document.getElementById('slideRight');
+    // buttonLeft = document.getElementById('slideLeft');
+
+    // buttonRight.onclick = function () {
+    //   document.getElementById('container').scrollLeft += 20;
+    // };
+    minusSlides = () => {
+        // debugger
+        document.getElementById('actionScroll').scrollLeft += 2000;
+    }
+    plusSlides = () => {
+        // debugger
+        document.getElementById('actionScroll').scrollLeft -= 2000;
+    }
+
+    // plusSlides(n) {
+    //     let slideIndex = 1;
+    //     let i;
+    //     let slides = document.getElementsByClassName("videoComp");
+    //     if (n > slides.length) {slideIndex = 1}
+    //     if (n < 1) {slideIndex = slides.length}
+    //     for (i = 0; i < slides.length; i++) {
+    //         slides[i].style.display = "none";
+    //     }
+    //     slides[slideIndex-1].style.display = "block";
+    // }
 
  
     render() {
@@ -42,15 +72,18 @@ class HomePage extends React.Component {
                     <div className="previewBox">
                         <video src="https://watchflix-seeds.s3-us-west-1.amazonaws.com/zombieland.mp4" controls autoPlay muted/>
                     </div>
-                <div className="actionContainer">
+                <MyList />
+                <div className="actionContainer" >
                     <p className="genre" >Action</p>
-                        <div className="action">
+                        <div className="action" id="actionScroll">
+                        <a className="prev" onClick={this.plusSlides} >&#10094;</a>
                         <div className="pixelSpace" />
                         {
                             action.map((video, i) => (     
                                 <Video img={video.photo_url} key={i}/>     
                             )) 
                         }
+                        <a className="next" onClick={this.minusSlides} >&#10095;</a>
                         </div>
                 </div>
                 <div className="comedyContainer">

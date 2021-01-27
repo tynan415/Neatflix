@@ -27,28 +27,29 @@
   height: 250px;
   z-index: 2;
   width: 100%;
-  overflow-y: auto;
+  overflow-y: clip;
   overflow-x: scroll;
   white-space: nowrap;
+  // overflow: visible;
 }
 
 .actionContainer {
   padding-top: 15px;
-  top: 700px;
+  top: 975px;
   position: absolute;
   width: 100%;
 }
 
 .comedyContainer {
   padding-top: 15px;
-  top: 975px;
+  top: 1250px;
   position: absolute;
   width: 100%;
 }
 .dramaContainer {
   padding-top: 15px;
   position: absolute;
-  top: 1250px;
+  top: 1525px;
   width: 100%;
 }
 
@@ -59,17 +60,29 @@
 .videoComp {
   display: inline-block;
   width: 300px;
-  z-index: 1;
   margin-left: 10px;
   margin-top: 50px;
-  object-fit: contain;
+  transition: all 500ms;
+  position: relative;
+  flex: 1 1 0px;
+}
+
+.videoComp:focus ~ .videoComp,
+.videoComp:hover ~ .videoComp {
+  transform: translateX(25%);
+}
+
+.videoComp:focus,
+.videoComp:hover {
+  transform: scale(1.5);
+  height: 250px;
+  z-index: 11;
 }
 
 .videoComp img {
   width: 300px;
   height: 200px;
   z-index: 1;
- 
 }
 
 .genre {
@@ -88,18 +101,28 @@
   height: auto;
 }
 
+.myList {
+  padding-top: 15px;
+  top: 700px;
+  position: absolute;
+  width: 100%;
+}
 
-// .prev, .next {
-//     cursor: pointer;
-//     position: sticky;
-//     top: 140px;
-//     width: 140px;
-//     height: 400px;
-//     color: red;
-//     font-weight: bold;
-//     font-size: 60px;
-//     border-radius: 0 3px 3px 0;
-// }
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+  transition: 0.6s ease;
+  z-index: 4;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
 
 // .prev {
 //   left: 0;

@@ -43,7 +43,6 @@ class SignUp extends React.Component {
     // }
 
     render() {
-        // debugger
         return (
             <div className="SignUp">
                 <div id="headLine"></div>

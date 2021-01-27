@@ -7,7 +7,7 @@ const mSTP = (state, ownProps) => ({
     
 })
 
-const mDTP = dispatch => ({
+const mDTP = (dispatch) => ({
     fetchList: () => dispatch(fetchList()),
     deleteFromList: (videoId) => dispatch(deleteFromList(videoId)),
     addToList: (videoId) => dispatch(addToList(videoId))

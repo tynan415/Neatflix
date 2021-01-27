@@ -9,18 +9,18 @@ class MyList extends React.Component {
 
 
     componentDidMount() {
-        this.props.requestLists()
+        this.props.fetchList()
     }
 
 
     render() {
         return (
             <div className="myList">
-                 <Video 
-                    src="https://watchflix-seeds.s3-us-west-1.amazonaws.com/zombieland.mp4" 
-                    pos="videoComp"
-                />
+                <p className="genre" >My List</p>
+                
             </div>
         )
     }
 }
+
+export default MyList;

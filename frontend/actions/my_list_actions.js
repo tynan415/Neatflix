@@ -25,7 +25,7 @@ export const fetchList = () => dispatch => (
 );
 
 export const addToList = (videoId) => dispatch => (
-    ListAPI.addList(videoId)
+    ListAPI.addToList(videoId)
     .then(videoId => dispatch(addToMyList(videoId)))
 );
 
