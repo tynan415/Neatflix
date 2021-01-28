@@ -22,18 +22,21 @@ class MyList extends React.Component {
                 }
             })
         }
-
-        return (
-            <div className="myList">
-                <p className="genre" >My List</p>
-                <div className="pixelSpace" />
-                    {
-                    my_vids.map((video, i) => (
-                        <Video img={video.photo_url} key={i} id={video.id} action={this.props.deleteFromList} />
-                    ))
-                    }
-            </div>
-        )
+        if (this.props.myList[0]) {
+            return (
+                <div className="myList">
+                    <p className="genre" >My List</p>
+                    <div className="pixelSpace" />
+                        {
+                        my_vids.map((video, i) => (
+                            <Video img={video.photo_url} key={i} id={video.id} action={this.props.deleteFromList} />
+                        ))
+                        }
+                </div>
+            )
+        } else {
+            return null;
+        }
     }
 }
 
