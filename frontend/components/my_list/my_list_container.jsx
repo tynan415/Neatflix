@@ -3,8 +3,9 @@ import  MyList from './my_list';
 import { fetchList, addToList, deleteFromList } from '../../actions/my_list_actions';
 
 const mSTP = (state, ownProps) => ({
-    currentUser: state.session.currentUser.id
-    
+    currentUser: state.session.currentUser.id,
+    myList: Object.values(state.myList),
+    videos: state.videos
 })
 
 const mDTP = (dispatch) => ({
@@ -13,4 +14,4 @@ const mDTP = (dispatch) => ({
     addToList: (videoId) => dispatch(addToList(videoId))
 })
 
-export default connect(null, mDTP)(MyList);
+export default connect(mSTP, mDTP)(MyList);

@@ -5,7 +5,6 @@ import MyList from '../my_list/my_list_container';
 class HomePage extends React.Component {
     constructor(props) {
         super(props);
-        this.myRef = React.createRef();
         this.state = {
             videos: [],
             genreType: [],
@@ -18,34 +17,12 @@ class HomePage extends React.Component {
         this.props.requestGenres()
     }
 
-
-
-    // buttonRight = document.getElementById('slideRight');
-    // buttonLeft = document.getElementById('slideLeft');
-
-    // buttonRight.onclick = function () {
-    //   document.getElementById('container').scrollLeft += 20;
-    // };
     minusSlides = () => {
-        // debugger
-        document.getElementById('actionScroll').scrollLeft += 2000;
+        document.getElementById('actionScroll').scrollLeft += 1000;
     }
     plusSlides = () => {
-        // debugger
-        document.getElementById('actionScroll').scrollLeft -= 2000;
+        document.getElementById('actionScroll').scrollLeft -= 1000;
     }
-
-    // plusSlides(n) {
-    //     let slideIndex = 1;
-    //     let i;
-    //     let slides = document.getElementsByClassName("videoComp");
-    //     if (n > slides.length) {slideIndex = 1}
-    //     if (n < 1) {slideIndex = slides.length}
-    //     for (i = 0; i < slides.length; i++) {
-    //         slides[i].style.display = "none";
-    //     }
-    //     slides[slideIndex-1].style.display = "block";
-    // }
 
  
     render() {
@@ -70,21 +47,23 @@ class HomePage extends React.Component {
         return (
             <div className="homePage" >
                     <div className="previewBox">
-                        <video src="https://watchflix-seeds.s3-us-west-1.amazonaws.com/zombieland.mp4" controls autoPlay muted/>
+                        <video src="https://www.youtube.com/embed/pVIwOZbvAoY" controls autoPlay muted/>
+                        <iframe src="https://www.youtube.com/embed/pVIwOZbvAoY" frameBorder="0" allow="autoplay;"></iframe>
                     </div>
-                <MyList />
+                 <MyList />
+                
                 <div className="actionContainer" >
                     <p className="genre" >Action</p>
-                        <div className="action" id="actionScroll">
                         <a className="prev" onClick={this.plusSlides} >&#10094;</a>
+                        <div className="action" id="actionScroll">
                         <div className="pixelSpace" />
                         {
                             action.map((video, i) => (     
-                                <Video img={video.photo_url} key={i}/>     
+                                <Video img={video.photo_url} key={i} action={this.props.addToList} id={video.id}/>     
                             )) 
                         }
-                        <a className="next" onClick={this.minusSlides} >&#10095;</a>
                         </div>
+                        <a className="next" onClick={this.minusSlides} >&#10095;</a>
                 </div>
                 <div className="comedyContainer">
                     <p className="genre" >Comedy</p>
@@ -92,7 +71,7 @@ class HomePage extends React.Component {
                         <div className="pixelSpace" />
                         {
                             comedy.map((video, i) => (     
-                                <Video img={video.photo_url} key={i}/>     
+                                <Video img={video.photo_url} key={i} action={this.props.addToList} id={video.id}/>     
                             )) 
                         }
                     </div>
@@ -103,7 +82,7 @@ class HomePage extends React.Component {
                         <div className="pixelSpace" />
                         {
                             drama.map((video, i) => (     
-                                <Video img={video.photo_url} key={i}/>     
+                                <Video img={video.photo_url} key={i} action={this.props.addToList} id={video.id}/>     
                             )) 
                         }
                     </div>
@@ -111,9 +90,7 @@ class HomePage extends React.Component {
         </div>
         )
 
-        }
-
-        
+        }  
     }
 }
 

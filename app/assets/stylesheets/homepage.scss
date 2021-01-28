@@ -13,7 +13,7 @@
   z-index: 1;
 }
 
-.previewBox video {
+.previewBox iframe {
   position: absolute;
   top: 0%;
   left: 0%;
@@ -27,7 +27,7 @@
   height: 250px;
   z-index: 2;
   width: 100%;
-  overflow-y: clip;
+  overflow-y: hidden;
   overflow-x: scroll;
   white-space: nowrap;
   // overflow: visible;
@@ -38,6 +38,7 @@
   top: 975px;
   position: absolute;
   width: 100%;
+  z-index: 0;
 }
 
 .comedyContainer {
@@ -76,7 +77,7 @@
 .videoComp:hover {
   transform: scale(1.5);
   height: 250px;
-  z-index: 11;
+  z-index: 10;
 }
 
 .videoComp img {
@@ -91,7 +92,7 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 40px;
   font-weight: 600;
-  z-index: 7;
+  z-index: 2;
   position: absolute;
 }
 
@@ -106,6 +107,14 @@
   top: 700px;
   position: absolute;
   width: 100%;
+
+  overflow-y: hidden;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.myList::-webkit-scrollbar {
+  display: none;
 }
 
 .prev, .next {
@@ -123,10 +132,3 @@
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
-
-// .prev {
-//   left: 0;
-// }
-// .next {
-//   left: 50%;
-// }

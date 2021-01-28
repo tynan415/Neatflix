@@ -1,14 +1,16 @@
 class User < ApplicationRecord
+    # skip_before_action :verify_authenticity_token
     before_validation :ensure_session_token
     validates :email, :password_digest, presence: true
     validates :email, uniqueness: true
     validates :password, length: {minimum: 6, allow_nil: true}
     attr_reader :password
 
+
     has_many :lists,
         primary_key: :id,
         foreign_key: :user_id,
-        class_name: :My_list
+        class_name: :MyList
         
     def password=(password)
         @password = password

@@ -8,3 +8,4 @@ class MyList < ApplicationRecord
         foreign_key: :video_id,
         class_name: :Video
 end
+ 
