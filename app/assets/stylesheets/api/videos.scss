@@ -1,3 +1,24 @@
 // Place all the styles related to the api/videos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.addButton {
+    cursor: pointer;
+    position: relative;
+    background-color: #141414;
+    color: grey;
+    border:2px solid grey;
+    padding: 10px 15px;
+    text-align: center;
+    font-weight: 1000;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 50%;
+    right: 80px;
+    top: 50px;
+  }
+
+  .addButton:hover {
+    color: white;
+    border-color: white;
+  }

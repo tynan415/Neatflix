@@ -19,7 +19,7 @@ class Video extends React.Component {
                 {/* <video controls>
                     <source src={this.props.src} type="video/mp4" />
                 </video> */}
-
+                <a className="addButton">+</a>
             </div>
         )
     }

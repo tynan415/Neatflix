@@ -1,6 +1,6 @@
 .homePage {
   display: flex;
-  background-color: black;
+  background-color:#141414;
   height: 100%; 
   width: 100vw;
   z-index: 0;
@@ -71,6 +71,7 @@
 .videoComp:focus ~ .videoComp,
 .videoComp:hover ~ .videoComp {
   transform: translateX(25%);
+  // transform: translateY(25%);
 }
 
 .videoComp:focus,
@@ -110,26 +111,31 @@
   font-size: 90px;
   z-index: 4;
   top: 20%;
-  padding: 10px;
+  padding: 7px;
   padding-top: 60px;
   padding-bottom: 50px;
   border-radius: 3px 0 0 3px;
+  -webkit-touch-callout: none; 
+  -webkit-user-select: none; 
+  -khtml-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none;
 }
 
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
   padding: 25px;
   padding-top: 60px;
   padding-bottom: 50px;
-  top: 20%;
 }
 
 .prev:hover, .next:hover {
-  background-color: white;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 
 .logos {
   height: 180px;
 }
+

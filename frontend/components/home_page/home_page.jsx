@@ -38,11 +38,12 @@ class HomePage extends React.Component {
     myList = null;
  
     render() {
-        if (this.props.videos.length === 0 || this.props.genres.length === 0) {
+        if (this.props.videos.length === 0 || Object.values(this.props.genres).length === 0) {
             return null;
         } else {
 
         const { videos, genres } = this.props;
+            console.log(genres)
 
         let action = videos.filter(video => (
             genres[video.genre_id].name === "Action"
@@ -104,6 +105,7 @@ class HomePage extends React.Component {
                     <a className="prev" onClick={this.scrollRightD} >&#10094;</a>
                 </div>
                 <div className="logos">
+                    
                 </ div>
         </div>
         )
