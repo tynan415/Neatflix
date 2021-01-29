@@ -29,7 +29,7 @@ class MyList extends React.Component {
                     <div className="pixelSpace" />
                         {
                         my_vids.map((video, i) => (
-                            <Video img={video.photo_url} key={i} id={video.id} action={this.props.deleteFromList} />
+                            <Video img={video.photo_url} key={i} id={video.id} action={this.props.deleteFromList} onList={true} />
                         ))
                         }
                 </div>

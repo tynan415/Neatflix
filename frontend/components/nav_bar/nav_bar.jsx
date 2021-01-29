@@ -12,6 +12,7 @@ class NavBar extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleUpdate = this.handleUpdate.bind(this);
         this.handleSearch = this.handleSearch.bind(this);
+        this.handleHome = this.handleHome.bind(this)
     }
     
     handleSubmit(e) {
@@ -30,13 +31,16 @@ class NavBar extends React.Component {
         }, 300)
     }
 
+    handleHome(e) {
+        e.preventDefault()
+        this.props.history.push("/browse")
+    }
+
     handleUpdate(e) {
         this.setState({
             search: e.currentTarget.value
         })
     }
-
-    
 
     render() {
         let placeholder = 'Title';
@@ -45,10 +49,10 @@ class NavBar extends React.Component {
         }
         return(
             <div className="navBar" >
-                <div id="logo" />
+                <div id="logo" onClick={this.handleHome} />
 
                 <form onChange={this.handleSearch} className="search">
-                    <input type="text"  placeholder={placeholder} onChange={this.handleUpdate} value={this.state.search} />
+                    <input type="text"  placeholder={placeholder} onChange={this.handleUpdate} value={this.props.search} />
                 </ form>
                 
                 <Link id="logOutBut" onClick={this.handleSubmit} to="/">logout</Link>

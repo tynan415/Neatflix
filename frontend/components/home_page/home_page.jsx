@@ -9,6 +9,8 @@ class HomePage extends React.Component {
             videos: [],
             genreType: [],
         }
+        this.handleHover = this.handleHover.bind(this)
+        this.handleUnhover = this.handleUnhover.bind(this)
     }
 
     componentDidMount() {
@@ -37,13 +39,22 @@ class HomePage extends React.Component {
 
     myList = null;
  
+    handleHover(e) {
+        e.currentTarget.children[2].classList.remove('hidden')
+        e.currentTarget.children[3].classList.remove('hidden')
+    }
+
+    handleUnhover(e) {
+        e.currentTarget.children[2].classList.add('hidden')
+        e.currentTarget.children[3].classList.add('hidden')
+    }
+
     render() {
         if (this.props.videos.length === 0 || Object.values(this.props.genres).length === 0) {
             return null;
         } else {
 
         const { videos, genres } = this.props;
-            console.log(genres)
 
         let action = videos.filter(video => (
             genres[video.genre_id].name === "Action"
@@ -64,20 +75,20 @@ class HomePage extends React.Component {
                     </div>
                 <MyList />
                 
-                <div className="actionContainer" >
-                    <p className="genre" >Action</p>
-                        <div className="action" id="actionScroll">
+                <div className="actionContainer"  onMouseOver={this.handleHover} onMouseLeave={this.handleUnhover}>
+                    <p className="genre">Action</p>
+                        <div className="action" id="actionScroll" >
                         <div className="pixelSpace" />
                         {
                             action.map((video, i) => (     
-                                <Video img={video.photo_url} key={i} action={this.props.addToList} id={video.id}/>     
+                                <Video img={video.photo_url} key={i} action={this.props.addToList} id={video.id} />     
                                 )) 
                             }
                         </div>
-                        <a className="next" onClick={this.scrollLeftA} >&#10095;</a>
-                        <a className="prev" onClick={this.scrollRightA} >&#10094;</a>
+                        <a className="next hidden" onClick={this.scrollLeftA} >&#10095;</a>
+                        <a className="prev hidden" onClick={this.scrollRightA} >&#10094;</a>
                 </div>
-                <div className="comedyContainer">
+                <div className="comedyContainer" onMouseOver={this.handleHover} onMouseLeave={this.handleUnhover}>
                     <p className="genre" >Comedy</p>
                     
                     <div className="comedy" id="comedyScroll">
@@ -88,10 +99,10 @@ class HomePage extends React.Component {
                             )) 
                         }
                     </div>
-                    <a className="next" onClick={this.scrollLeftC} >&#10095;</a>
-                    <a className="prev" onClick={this.scrollRightC} >&#10094;</a>
+                    <a className="next hidden" onClick={this.scrollLeftC} >&#10095;</a>
+                    <a className="prev hidden" onClick={this.scrollRightC} >&#10094;</a>
                 </div>
-                <div className="dramaContainer">
+                <div className="dramaContainer" onMouseOver={this.handleHover} onMouseLeave={this.handleUnhover}>
                     <p className="genre" >Drama</p>
                     <div className="drama" id="dramaScroll">
                         <div className="pixelSpace" />
@@ -101,8 +112,8 @@ class HomePage extends React.Component {
                             )) 
                         }
                     </div>
-                    <a className="next" onClick={this.scrollLeftD} >&#10095;</a>
-                    <a className="prev" onClick={this.scrollRightD} >&#10094;</a>
+                    <a className="next hidden" onClick={this.scrollLeftD} >&#10095;</a>
+                    <a className="prev hidden" onClick={this.scrollRightD} >&#10094;</a>
                 </div>
                 <div className="logos">
                     
