@@ -6,6 +6,8 @@ class User < ApplicationRecord
     validates :password, length: {minimum: 6, allow_nil: true}
     attr_reader :password
 
+    after_initialize :create_list
+
 
     has_many :lists,
         primary_key: :id,
@@ -38,6 +40,10 @@ class User < ApplicationRecord
         else
             nil
         end
+    end
+
+    def create_list
+        id = self.id
     end
 
 end

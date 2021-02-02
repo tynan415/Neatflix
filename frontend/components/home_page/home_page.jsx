@@ -82,7 +82,8 @@ class HomePage extends React.Component {
                         <div className="pixelSpace" />
                         {
                             action.map((video, i) => (     
-                                <Video clsNameBut="addButton hidden" src={video.video_url} img={video.photo_url} key={i} action={this.props.addToList} id={video.id} />     
+                                <Video clsNameBut="addButton hidden" 
+                                src={video.video_url} img={video.photo_url} key={i} action={this.props.addToList} id={video.id} />     
                                 )) 
                             }
                         </div>
@@ -96,7 +97,8 @@ class HomePage extends React.Component {
                         <div className="pixelSpace" />
                         {
                             comedy.map((video, i) => (     
-                                <Video clsNameBut="addButton hidden" src={video.video_url} img={video.photo_url} key={i} action={this.props.addToList} id={video.id}/>     
+                                <Video clsNameBut="addButton hidden" 
+                                src={video.video_url} img={video.photo_url} key={i} action={this.props.addToList} id={video.id}/>     
                             )) 
                         }
                     </div>
@@ -109,7 +111,8 @@ class HomePage extends React.Component {
                         <div className="pixelSpace" />
                         {
                             drama.map((video, i) => (     
-                                <Video clsNameBut="addButton hidden" src={video.video_url} img={video.photo_url} key={i} action={this.props.addToList} id={video.id}/>     
+                                <Video clsNameBut="addButton hidden"  
+                                src={video.video_url} img={video.photo_url} key={i} action={this.props.addToList} id={video.id}/>     
                             )) 
                         }
                     </div>

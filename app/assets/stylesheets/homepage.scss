@@ -79,6 +79,10 @@
   right: 0%;
 }
 
+.videoComp:hover video {
+  opacity: 1;
+}
+
 .videoComp video:hover {
  opacity: 1;
 }
