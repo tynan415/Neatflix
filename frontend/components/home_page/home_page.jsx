@@ -56,9 +56,9 @@ class HomePage extends React.Component {
 
         const { videos, genres } = this.props;
 
-        let action = videos.filter(video => (
-            genres[video.genre_id].name === "Action"
-        ));
+        let action = videos.filter(video => {
+            return genres[video.genre_id].name === "Action"
+            });
 
         let comedy = videos.filter(video => (
             genres[video.genre_id].name === "Comedy"
@@ -71,7 +71,8 @@ class HomePage extends React.Component {
         return (
             <div className="homePage" >
                     <div className="previewBox">
-                        <iframe src="https://www.youtube.com/embed/pVIwOZbvAoY" frameBorder="0" allow="autoplay;"></iframe>
+                        <video src="https://neatflix-415-dev.s3-us-west-1.amazonaws.com/Vid+Files/WandaVision.mp4" autoPlay muted controls>
+                        </video>
                     </div>
                 <MyList />
                 
@@ -81,7 +82,7 @@ class HomePage extends React.Component {
                         <div className="pixelSpace" />
                         {
                             action.map((video, i) => (     
-                                <Video img={video.photo_url} key={i} action={this.props.addToList} id={video.id} />     
+                                <Video clsNameBut="addButton hidden" src={video.video_url} img={video.photo_url} key={i} action={this.props.addToList} id={video.id} />     
                                 )) 
                             }
                         </div>
@@ -95,7 +96,7 @@ class HomePage extends React.Component {
                         <div className="pixelSpace" />
                         {
                             comedy.map((video, i) => (     
-                                <Video img={video.photo_url} key={i} action={this.props.addToList} id={video.id}/>     
+                                <Video clsNameBut="addButton hidden" src={video.video_url} img={video.photo_url} key={i} action={this.props.addToList} id={video.id}/>     
                             )) 
                         }
                     </div>
@@ -108,7 +109,7 @@ class HomePage extends React.Component {
                         <div className="pixelSpace" />
                         {
                             drama.map((video, i) => (     
-                                <Video img={video.photo_url} key={i} action={this.props.addToList} id={video.id}/>     
+                                <Video clsNameBut="addButton hidden" src={video.video_url} img={video.photo_url} key={i} action={this.props.addToList} id={video.id}/>     
                             )) 
                         }
                     </div>

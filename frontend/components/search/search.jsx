@@ -15,18 +15,24 @@ const SearchPage = (props) => {
         video.title.toLowerCase().includes(search.toLowerCase())
     ))
 
-    if(!vids) return null;
+    if(vids.length === 0) return (
+        <div className="noResults">
+            <div className="shrug">your search yielded no results.
+            </div>
+        </div>
+    )
+    
     return (
         <div className="searchComp">
             <div className="space" />
             <ul className="searchDisplay">
                 {
                     vids.map((video, i) => (     
-                        // <img className="searchItem" key={i} src={video.photo_url} alt={video.title}></img>
-                        <Video img={video.photo_url} key={i} action={props.addToList} id={video.id}/>     
+                        <Video clsNameBut="srchAddBut hidden" src={video.video_url} img={video.photo_url} key={i} action={props.addToList} id={video.id}/>     
                     ))
                 }
             </ul>
+            <div className="searchFill" />    
         </div>
     )
     

@@ -11,4 +11,5 @@ class Video < ApplicationRecord
     
         
     has_one_attached :photo
+    has_one_attached :video_url
 end
