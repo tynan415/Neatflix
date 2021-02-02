@@ -7,8 +7,8 @@ class View extends React.Component{
 
     componentDidMount() {
         // console.log(this.props)
-        this.props.getVideos()
-        this.props.requestGenres()
+        // this.props.getVideos()
+        // this.props.requestGenres()
         this.props.requestVideo(this.props.match.params.videoId);
     }
 
