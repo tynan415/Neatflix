@@ -7,32 +7,38 @@ class Video extends React.Component {
         super(props)
         this.state = {
             muted: true,
-            sound: String.fromCharCode(55357, 56586),
-
+            onList: this.props.onList 
         }
         this.ref = React.createRef()
         this.handleClick = this.handleClick.bind(this)
         this.handleHover = this.handleHover.bind(this)
-        this.handleWatch = this.handleWatch.bind(this)
         this.handleUnhover = this.handleUnhover.bind(this)
         this.mute = this.mute.bind(this)
     }
     
-
     handleClick(e) {
         e.preventDefault()
-        this.props.action(this.props.id)
+        let newListValue = !this.state.onList
+        this.setState({
+            onList: newListValue
+        })
+        
+        if (this.state.onList) {
+            this.props.del(this.props.id)
+        } else  {
+            this.props.action(this.props.id)
+        }
+        
+        // console.log(this.props.list)
     }
 
     mute(e) {
         e.preventDefault()
-        this.state.muted = !this.state.muted
-        // console.log(this.state.muted)
+        let newMuteVal = !this.state.muted
+        this.setState({
+            muted: newMuteVal
+        })
         this.ref.current.muted = !this.ref.current.muted
-        this.state.sound = String.fromCharCode(55357, 56586)
-        if (this.state.muted) {
-            this.state.sound = String.fromCharCode(55357, 56583)
-        }
     }
 
     handleHover(e) {
@@ -58,12 +64,6 @@ class Video extends React.Component {
         }
     }
     
-    handleWatch(e) {
-        e.preventDefault()
-        console.log(this)
-        // this.props.history.push(`/browse/${this.props.id}`)
-    }
-
     handleUnhover(e) {
         let video = e.currentTarget.children[1];
         video.pause();
@@ -75,9 +75,13 @@ class Video extends React.Component {
     }
     
     render() {
+        let sound = String.fromCharCode(55357, 56583)
+        if (this.state.muted) {
+            sound = String.fromCharCode(55357, 56586)
+        }
 
         let sym = "+"
-        if (this.props.onList) {
+        if (this.state.onList) {
             sym = "-"
         }
         
@@ -88,7 +92,7 @@ class Video extends React.Component {
                     <source src={this.props.src} type="video/mp4" />
                 </video>
                 <a className={this.props.clsNameBut} onClick={this.handleClick} >{sym}</a>
-                <a className={this.props.muteButCls} onClick={this.mute} >{this.state.sound}</a>
+                <a className={this.props.muteButCls} onClick={this.mute} >{sound}</a>
                 <Link className={this.props.playButCls} to={`/browse/${this.props.id}`} >&#9654;</Link>
             </div>
         )

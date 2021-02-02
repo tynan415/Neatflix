@@ -8,13 +8,13 @@ class NavBar extends React.Component {
         this.state = {
             search: ''
         }
-
+        this.handleScroll = this.handleScroll.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleUpdate = this.handleUpdate.bind(this);
         this.handleSearch = this.handleSearch.bind(this);
-        this.handleHome = this.handleHome.bind(this)
+        this.handleHome = this.handleHome.bind(this);
     }
-    
+   
     handleSubmit(e) {
         e.preventDefault();
         this.props.logout()
@@ -29,6 +29,20 @@ class NavBar extends React.Component {
                 this.props.history.push(`/search/${this.state.search}`);
             }
         }, 300)
+    }
+
+    handleScroll(e) {
+        let scrollpos = window.pageYOffset;
+        let opacity = Math.ceil(scrollpos / 4) * 0.01
+        document.getElementById("navBar").style.backgroundColor = `rgba(10, 10, 10, ${opacity})`;
+    }
+     
+    componentDidMount() {
+        window.addEventListener('scroll', this.handleScroll);
+    }
+    
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
     }
 
     handleHome(e) {
@@ -48,7 +62,7 @@ class NavBar extends React.Component {
             placeholder = this.state.search
         }
         return(
-            <div className="navBar" >
+            <div className="navBar" id="navBar" >
                 <div id="logo" onClick={this.handleHome} />
 
                 <form onChange={this.handleSearch} className="search">

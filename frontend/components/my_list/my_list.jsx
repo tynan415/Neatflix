@@ -54,7 +54,7 @@ class MyList extends React.Component {
                                     src={video.video_url} 
                                     img={video.photo_url} 
                                     key={i} id={video.id} 
-                                    action={this.props.deleteFromList} 
+                                    del={this.props.deleteFromList} 
                                     onList={true} 
                                 />
                                 ))

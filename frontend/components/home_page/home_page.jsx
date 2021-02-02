@@ -83,7 +83,8 @@ class HomePage extends React.Component {
                         {
                             action.map((video, i) => (     
                                 <Video clsNameBut="addButton hidden" playButCls="vidPage hidden" muteButCls="muteBut hidden"
-                                src={video.video_url} img={video.photo_url} key={i} action={this.props.addToList} id={video.id} />     
+                                    src={video.video_url} img={video.photo_url} key={i} action={this.props.addToList} 
+                                    list={this.props.myList} del={this.props.deleteFromList} id={video.id} />     
                                 )) 
                             }
                         </div>
@@ -98,7 +99,8 @@ class HomePage extends React.Component {
                         {
                             comedy.map((video, i) => (     
                                 <Video clsNameBut="addButton hidden" playButCls="vidPage hidden" muteButCls="muteBut hidden"
-                                src={video.video_url} img={video.photo_url} key={i} action={this.props.addToList} id={video.id}/>     
+                                src={video.video_url} img={video.photo_url} key={i} action={this.props.addToList}
+                                list={this.props.myList} del={this.props.deleteFromList} id={video.id}/>     
                             )) 
                         }
                     </div>
@@ -112,7 +114,8 @@ class HomePage extends React.Component {
                         {
                             drama.map((video, i) => (     
                                 <Video clsNameBut="addButton hidden" playButCls="vidPage hidden" muteButCls="muteBut hidden" 
-                                src={video.video_url} img={video.photo_url} key={i} action={this.props.addToList} id={video.id}/>     
+                                src={video.video_url} img={video.photo_url} key={i} action={this.props.addToList} 
+                                list={this.props.myList} del={this.props.deleteFromList} id={video.id}/>     
                             )) 
                         }
                     </div>

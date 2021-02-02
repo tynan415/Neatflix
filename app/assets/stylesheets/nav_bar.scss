@@ -3,44 +3,49 @@
     display: flex;
     height: 3.7vmax;
     width: 100vw;
-    background-color: rgba(10, 10, 10, 0.92);
+    background-color: rgba(10, 10, 10, 0.02);
     flex-direction: row;
     z-index: 10;
+    justify-content: flex-end;
+    transition: all 300ms;
 }
 
 .navBar #logo {
-    position: relative;
-    top:50%;
-    left: 29px;
     height: 30px;
     width: 90px;   
+    top: 10px;
     background-size: cover;
     background-image: image-url("logos/Neatflix.png");
     z-index: 1;
-    transform: translate(0, -50%);
+    align-self: center;
 }
 
 .search {
     width: 140px;
     height: 20px;
-    position: relative;
-    left: 70%;
+    padding-right: 60px;
     z-index: 1;
-    top: 50%;
-    transform: translate(0, -50%);
+    align-self: center;
+    margin-right:10px ;
 }
 
 #logOutBut {
-    position: relative;
+    // position: relative;
+    align-self: center;
     background-color: #141414;
     height: 30px;
     width: 60px;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     border-radius: 4px;
-    left: 75%;
-    top: 20%;
+    margin-right: 30px;
+    padding-top: 5px;
     text-align: center;
     line-height: 25px;
     color: #E50914;
+    transition: all 300ms ease-in-out;
 }
+
+#logOutBut:hover {
+    background-color: darkgray;
+ }

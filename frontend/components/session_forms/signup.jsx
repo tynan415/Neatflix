@@ -11,6 +11,7 @@ class SignUp extends React.Component {
             errors: []
         }
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleHome = this.handleHome.bind(this);
         this.clearedErrors = false;
         this.renderErrors = this.renderErrors.bind(this);
     }
@@ -38,13 +39,15 @@ class SignUp extends React.Component {
         })
     }
 
-    // componentWillUnmount(){
-    //     this.props.clearErrors();
-    // }
+    handleHome(e) {
+        e.preventDefault()
+        this.props.history.push("/")
+    }
 
     render() {
         return (
             <div className="SignUp">
+                <div id="logo" onClick={this.handleHome} />
                 <div id="headLine"></div>
                 <form className="signUp-form">
                 <h1>enter your email</h1>

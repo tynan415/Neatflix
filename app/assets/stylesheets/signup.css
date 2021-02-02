@@ -15,6 +15,11 @@
     transform: translate(-50%, -50%);
 }
 
+.SignUp {
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+}
 .signUp-form > h1 {
     position: relative;
     font-size: 18px;
