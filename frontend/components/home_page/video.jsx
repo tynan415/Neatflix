@@ -42,7 +42,10 @@ class Video extends React.Component {
         if (muteBut) {
             muteBut.classList.remove('hidden')  
         }
-
+        let pageBut = e.currentTarget.children[4]
+        if (pageBut) {
+            pageBut.classList.remove('hidden')  
+        }
         let vid = e.currentTarget.children[1]
         if (vid) {
             vid.play().catch(e => {
@@ -59,6 +62,7 @@ class Video extends React.Component {
         video.load();
         e.currentTarget.children[2].classList.add('hidden')
         e.currentTarget.children[3].classList.add('hidden')
+        e.currentTarget.children[4].classList.add('hidden')
     }
     
     render() {
@@ -68,8 +72,6 @@ class Video extends React.Component {
             sym = "-"
         }
         
-        
-        
         return (
             <div className="videoComp" onMouseOver={this.handleHover} onMouseLeave={this.handleUnhover}>
                 <img src={this.props.img}  />
@@ -77,8 +79,8 @@ class Video extends React.Component {
                     <source src={this.props.src} type="video/mp4" />
                 </video>
                 <a className={this.props.clsNameBut} onClick={this.handleClick} >{sym}</a>
-                <a className="muteBut hidden" onClick={this.mute} >{this.state.sound}</a>
-                <a className='vidPage'>&#9654;</a>
+                <a className={this.props.muteButCls} onClick={this.mute} >{this.state.sound}</a>
+                <a className={this.props.playButCls}>&#9654;</a>
             </div>
         )
     }

@@ -28,7 +28,14 @@ const SearchPage = (props) => {
             <ul className="searchDisplay">
                 {
                     vids.map((video, i) => (     
-                        <Video clsNameBut="srchAddBut hidden" src={video.video_url} img={video.photo_url} key={i} action={props.addToList} id={video.id}/>     
+                        <Video clsNameBut="srchAddBut hidden"
+                            playButCls="srchPlayBut hidden"
+                            muteButCls="srchMuteBut hidden" 
+                            src={video.video_url} 
+                            img={video.photo_url} key={i} 
+                            action={props.addToList} 
+                            id={video.id}
+                        />     
                     ))
                 }
             </ul>

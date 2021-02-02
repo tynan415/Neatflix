@@ -41,10 +41,9 @@
     text-align: center;
     font-weight: 1000;
     font-style: bold;
-    // display: inline-block;
     border-radius: 50%;
-    right: 30px;
-    top: 140px;
+    right: 76px;
+    top: 170px;
   }
 
   .muteBut {
@@ -91,8 +90,45 @@
     z-index: 4;
   }
 
-  .vidPage:hover {
+  .vidPage:hover,
+  .srchPlayBut:hover,
+  .srchMuteBut:hover {
     color: white;
     border-color: white;
     font-style: bold;
   }
+
+  .srchPlayBut {
+    cursor: pointer;
+    transition: all 500ms ease-in;
+    position: absolute;
+    background-color: #141414;
+    color: grey;
+    border:2px solid grey;
+    padding: 6px 9px;
+    text-align: center;
+    display: inline-block;
+    font-size: 25px;
+    border-radius: 50%;
+    right: 177px;
+    top: 170px;
+    z-index: 4;
+  }
+  
+  .srchMuteBut{
+    cursor: pointer;
+    transition: all 500ms ease-in;
+    position: absolute;
+    background-color: #141414;
+    color: grey;
+    border:2px solid grey;
+    padding: 6px 4px;
+    text-align: center;
+    display: inline-block;
+    font-size: 25px;
+    border-radius: 50%;
+    right: 125px;
+    top: 170px;
+    z-index: 4;
+  }
+  

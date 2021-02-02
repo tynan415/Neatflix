@@ -48,7 +48,15 @@ class MyList extends React.Component {
                     <div className="pixelSpace" />
                         {
                             my_vids.map((video, i) => (
-                                <Video clsNameBut="addButton hidden" img={video.photo_url} key={i} id={video.id} action={this.props.deleteFromList} onList={true} />
+                                <Video clsNameBut="addButton hidden"
+                                    playButCls="vidPage hidden"
+                                    muteButCls="muteBut hidden" 
+                                    src={video.video_url} 
+                                    img={video.photo_url} 
+                                    key={i} id={video.id} 
+                                    action={this.props.deleteFromList} 
+                                    onList={true} 
+                                />
                                 ))
                             }
                 </div>
