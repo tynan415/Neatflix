@@ -74,6 +74,7 @@
   }
 
   .vidPage {
+    text-decoration: none;
     cursor: pointer;
     transition: all 500ms ease-in;
     position: relative;
@@ -93,12 +94,14 @@
   .vidPage:hover,
   .srchPlayBut:hover,
   .srchMuteBut:hover {
+    text-decoration: none;
     color: white;
     border-color: white;
     font-style: bold;
   }
 
   .srchPlayBut {
+    text-decoration: none;
     cursor: pointer;
     transition: all 500ms ease-in;
     position: absolute;
@@ -131,4 +134,25 @@
     top: 170px;
     z-index: 4;
   }
+
+.view {
+  background-color: #141414;
+  width: 100%;
+  max-height: 100%;
+  top: 100%;
+}
+
+.centerDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.fullVideo{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
   

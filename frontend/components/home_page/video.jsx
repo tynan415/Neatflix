@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 
 class Video extends React.Component {
@@ -6,11 +7,13 @@ class Video extends React.Component {
         super(props)
         this.state = {
             muted: true,
-            sound: String.fromCharCode(55357, 56586)
+            sound: String.fromCharCode(55357, 56586),
+
         }
         this.ref = React.createRef()
         this.handleClick = this.handleClick.bind(this)
         this.handleHover = this.handleHover.bind(this)
+        this.handleWatch = this.handleWatch.bind(this)
         this.handleUnhover = this.handleUnhover.bind(this)
         this.mute = this.mute.bind(this)
     }
@@ -54,6 +57,12 @@ class Video extends React.Component {
 
         }
     }
+    
+    handleWatch(e) {
+        e.preventDefault()
+        console.log(this)
+        // this.props.history.push(`/browse/${this.props.id}`)
+    }
 
     handleUnhover(e) {
         let video = e.currentTarget.children[1];
@@ -80,7 +89,7 @@ class Video extends React.Component {
                 </video>
                 <a className={this.props.clsNameBut} onClick={this.handleClick} >{sym}</a>
                 <a className={this.props.muteButCls} onClick={this.mute} >{this.state.sound}</a>
-                <a className={this.props.playButCls}>&#9654;</a>
+                <Link className={this.props.playButCls} to={`/browse/${this.props.id}`} >&#9654;</Link>
             </div>
         )
     }
