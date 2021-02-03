@@ -1,5 +1,5 @@
 import React from 'react';
-import Video from './video';
+import Video from './video_cont';
 import MyList from '../my_list/my_list_container';
 
 class HomePage extends React.Component {
@@ -84,7 +84,7 @@ class HomePage extends React.Component {
                             action.map((video, i) => (     
                                 <Video clsNameBut="addButton hidden" playButCls="vidPage hidden" muteButCls="muteBut hidden"
                                     src={video.video_url} img={video.photo_url} key={i} action={this.props.addToList} 
-                                    list={this.props.myList} del={this.props.deleteFromList} id={video.id} />     
+                                    del={this.props.deleteFromList} id={video.id} />     
                                 )) 
                             }
                         </div>
@@ -100,7 +100,7 @@ class HomePage extends React.Component {
                             comedy.map((video, i) => (     
                                 <Video clsNameBut="addButton hidden" playButCls="vidPage hidden" muteButCls="muteBut hidden"
                                 src={video.video_url} img={video.photo_url} key={i} action={this.props.addToList}
-                                list={this.props.myList} del={this.props.deleteFromList} id={video.id}/>     
+                                del={this.props.deleteFromList} id={video.id}/>     
                             )) 
                         }
                     </div>
@@ -115,7 +115,7 @@ class HomePage extends React.Component {
                             drama.map((video, i) => (     
                                 <Video clsNameBut="addButton hidden" playButCls="vidPage hidden" muteButCls="muteBut hidden" 
                                 src={video.video_url} img={video.photo_url} key={i} action={this.props.addToList} 
-                                list={this.props.myList} del={this.props.deleteFromList} id={video.id}/>     
+                                del={this.props.deleteFromList} id={video.id}/>     
                             )) 
                         }
                     </div>

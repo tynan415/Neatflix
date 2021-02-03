@@ -8,10 +8,12 @@ class NavBar extends React.Component {
         this.state = {
             search: ''
         }
+        this.handleSearchClick = this.handleSearchClick.bind(this);
         this.handleScroll = this.handleScroll.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleUpdate = this.handleUpdate.bind(this);
         this.handleSearch = this.handleSearch.bind(this);
+        this.removeToggle = this.removeToggle.bind(this);
         this.handleHome = this.handleHome.bind(this);
     }
    
@@ -29,6 +31,19 @@ class NavBar extends React.Component {
                 this.props.history.push(`/search/${this.state.search}`);
             }
         }, 300)
+    }
+
+    handleSearchClick(e) {
+        let elem = document.getElementById("input")
+        elem.classList.add("toggle")
+        document.addEventListener('click', this.removeToggle)
+    }
+
+    removeToggle(e) {
+        if (e.target !== document.getElementById("input")) {
+            document.getElementById("input").classList.remove("toggle")
+            document.removeEventListener('click', this.removeToggle);
+        }
     }
 
     handleScroll(e) {
@@ -64,10 +79,18 @@ class NavBar extends React.Component {
         return(
             <div className="navBar" id="navBar" >
                 <div id="logo" onClick={this.handleHome} />
-
-                <form onChange={this.handleSearch} className="search">
-                    <input type="text"  placeholder={placeholder} onChange={this.handleUpdate} value={this.props.search} />
-                </ form>
+                <div onClick={this.handleHome} className="homeLink">Home</div>
+                <div className="movieLink">Movies</div>
+                <div className="tvLink">TV Shows</div>
+                <div className="listLink">My List</div>
+                
+                <div className="searchGlass">
+                    <div className="search"  onChange={this.handleSearch}>
+                        <input className="input" id="input" type="text" placeholder={placeholder} onChange={this.handleUpdate} value={this.props.search} />
+                        <img className="img" onClick={this.handleSearchClick}
+                            src="https://static.vecteezy.com/system/resources/previews/000/442/657/non_2x/vector-search-icon.jpg" alt=""></img>
+                    </div>
+                </div>
                 
                 <Link id="logOutBut" onClick={this.handleSubmit} to="/">logout</Link>
             </div>

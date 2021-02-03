@@ -7,7 +7,6 @@ class Video extends React.Component {
         super(props)
         this.state = {
             muted: true,
-            onList: this.props.onList 
         }
         this.ref = React.createRef()
         this.handleClick = this.handleClick.bind(this)
@@ -18,18 +17,12 @@ class Video extends React.Component {
     
     handleClick(e) {
         e.preventDefault()
-        let newListValue = !this.state.onList
-        this.setState({
-            onList: newListValue
-        })
-        
-        if (this.state.onList) {
+       
+        if (this.props.onList) {
             this.props.del(this.props.id)
         } else  {
             this.props.action(this.props.id)
         }
-        
-        // console.log(this.props.list)
     }
 
     mute(e) {
@@ -81,7 +74,7 @@ class Video extends React.Component {
         }
 
         let sym = "+"
-        if (this.state.onList) {
+        if (this.props.onList) {
             sym = "-"
         }
         

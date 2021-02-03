@@ -3,7 +3,6 @@ import Navbar from './nav_bar';
 import { logout } from '../../actions/session_actions';
 
 const mSTP = (state, ownProps) =>{
-    // console.log(ownProps.match.params.query)
     return {
     search: ownProps.match.params.query
 }}
