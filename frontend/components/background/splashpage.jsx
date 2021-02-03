@@ -67,6 +67,7 @@ class SplashPage extends React.Component {
                         onChange={this.handleInput('email')}
                     /> 
                     <button id="getBut" onClick={this.handleSubmit}>GET STARTED</button>
+                    <br/>
                     {emailError}
                 </div>
             </div>

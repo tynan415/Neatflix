@@ -72,10 +72,7 @@ class NavBar extends React.Component {
     }
 
     render() {
-        let placeholder = 'Title';
-        if(this.state.search) {
-            placeholder = this.state.search
-        }
+        
         return(
             <div className="navBar" id="navBar" >
                 <div id="logo" onClick={this.handleHome} />
@@ -86,7 +83,7 @@ class NavBar extends React.Component {
                 
                 <div className="searchGlass">
                     <div className="search"  onChange={this.handleSearch}>
-                        <input className="input" id="input" type="text" placeholder={placeholder} onChange={this.handleUpdate} value={this.props.search} />
+                        <input className="input" id="input" type="text" placeholder='Search by Title' onChange={this.handleUpdate} value={this.props.search} />
                         <img className="img" onClick={this.handleSearchClick}
                             src="https://static.vecteezy.com/system/resources/previews/000/442/657/non_2x/vector-search-icon.jpg" alt=""></img>
                     </div>
