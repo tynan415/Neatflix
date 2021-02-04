@@ -14,7 +14,9 @@ class HomePage extends React.Component {
     }
 
     componentDidMount() {
-        this.props.getVideos()
+        this.props.getVideos().then(() => {
+            // console.log("hello")
+        })
         this.props.requestGenres()
     }
 
@@ -55,8 +57,12 @@ class HomePage extends React.Component {
         } else {
 
         const { videos, genres } = this.props;
+        console.log(videos)
+        // console.log(genres)
 
         let action = videos.filter(video => {
+            // console.log(video.genre_id)
+            // if (!genres || !video) return;
             return genres[video.genre_id].name === "Action"
             });
 
@@ -71,7 +77,7 @@ class HomePage extends React.Component {
         return (
             <div className="homePage" >
                     <div className="previewBox">
-                        <video src="https://neatflix-415-dev.s3-us-west-1.amazonaws.com/Vid+Files/WandaVision.mp4" autoPlay muted controls>
+                        <video src="https://neatflix-415-dev.s3-us-west-1.amazonaws.com/Videos/WandaVision.mp4" autoPlay muted controls>
                         </video>
                     </div>
                 <MyList />

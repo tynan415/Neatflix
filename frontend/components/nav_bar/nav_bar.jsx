@@ -60,8 +60,8 @@ class NavBar extends React.Component {
         window.removeEventListener('scroll', this.handleScroll);
     }
 
-    handleHome(e) {
-        e.preventDefault()
+    handleHome() {
+        // debugger
         this.props.history.push("/browse")
     }
 

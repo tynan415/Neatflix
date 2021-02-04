@@ -1,2 +1,2 @@
 
-json.set @video
+json.partial! 'api/videos/video', video: @video

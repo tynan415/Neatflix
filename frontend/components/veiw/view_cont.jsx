@@ -8,7 +8,7 @@ import { fetchList, addToList, deleteFromList } from '../../actions/my_list_acti
 
 const mSTP = (state, ownProps) => ({
     video: state.videos[ownProps.match.params.videoId],
-    videos: Object.values(state.videos),
+    // videos: Object.values(state.videos),
     myList: Object.values(state.myList),
     genres: state.genreType,
 })
