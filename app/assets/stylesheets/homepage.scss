@@ -40,7 +40,6 @@
   display: block;
 }
 
-
 .myList {
   height: 250px;
   padding-top: 15px;
@@ -84,10 +83,6 @@
   opacity: 1;
   width: 100%;
 }
-
-// .videoComp video:hover {
-//  opacity: 1;
-// }
 
 .videoComp:hover ~ .videoComp {
   transform: translateX(25%);
@@ -157,9 +152,37 @@
 
 .logos {
   height: 180px;
+  width: auto;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 1), rgba(90, 90, 90, 1));
+  margin-top: 80px;
+  
+  .linkedIn {
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    background-image: image-url("logos/linkedin.png");
+    align-self: center;
+    margin: 10px;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  .gitHub {
+    background-image: image-url("logos/GitHub.png");
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    align-self: center;
+    margin: 10px;
+    &:hover{
+      cursor: pointer;
+    }
+  }
 }
 
 .hidden {
   opacity: 0.0;
-  width: 0px;
 }

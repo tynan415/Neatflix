@@ -24,7 +24,7 @@ const SearchPage = (props) => {
     return (
         <div className="searchComp">
             <div className="space" />
-            <ul className="searchDisplay">
+            <div className="searchDisplay">
                 {
                     vids.map((video, i) => (     
                         <Video clsNameBut="srchAddBut hidden"
@@ -37,8 +37,8 @@ const SearchPage = (props) => {
                         />     
                     ))
                 }
-            </ul>
-            <div className="searchFill" />    
+            </div>
+            <div className="RsFixed"/>
         </div>
     )
     

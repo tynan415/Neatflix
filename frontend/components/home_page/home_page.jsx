@@ -118,7 +118,8 @@ class HomePage extends React.Component {
                     <a className="prev hidden" onClick={this.scrollRightD} >&#10094;</a>
                 </div>
                 <div className="logos">
-                    
+                <a className="linkedIn" href="https://www.linkedin.com/in/philip-tynan-a9a4781b7/"></a>
+                    <a className="gitHub" href="https://github.com/tynan415"></a>
                 </ div>
         </div>
         )
