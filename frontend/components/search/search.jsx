@@ -10,7 +10,6 @@ const SearchPage = (props) => {
 
 
     let search = props.search
-    // console.log(search)
     let vids = props.videos.filter(video =>(
         video.title.toLowerCase().includes(search.toLowerCase())
     ))

@@ -1,4 +1,5 @@
-.homePage {
+.homePage,
+.typeShowPage {
   display: flex;
   background-color:#141414;
   height: 100%; 
@@ -73,7 +74,7 @@
   opacity: 0;
   transition: all 500ms ease-in;
   height: 70%;
-  width: 100%;
+  width: 0px;
   object-fit: fill;
   position: absolute;
   right: 0%;
@@ -81,13 +82,13 @@
 
 .videoComp:hover video {
   opacity: 1;
+  width: 100%;
 }
 
-.videoComp video:hover {
- opacity: 1;
-}
+// .videoComp video:hover {
+//  opacity: 1;
+// }
 
-.videoComp:focus ~ .videoComp,
 .videoComp:hover ~ .videoComp {
   transform: translateX(25%);
 }
@@ -123,7 +124,6 @@
 }
 
 .prev, .next {
-  // visibility: visible;
   transition: all 500ms ease-in;
   cursor: pointer;
   position: absolute;
@@ -161,4 +161,5 @@
 
 .hidden {
   opacity: 0.0;
+  width: 0px;
 }

@@ -1,20 +1,21 @@
-import React from 'react';
-import Video from './video_cont';
-import MyList from '../my_list/my_list_container';
+import React from 'react'
+import Video from '../home_page/video_cont'
+import MyList from '../my_list/my_list_container'
 
-class HomePage extends React.Component {
+class TypeShowPage extends React.Component {
     constructor(props) {
-        super(props);
-       
+        super(props)
         this.handleHover = this.handleHover.bind(this)
         this.handleUnhover = this.handleUnhover.bind(this)
-    }
-
+        }
+    
     componentDidMount() {
         this.props.getVideos()
         this.props.requestGenres()
+        this.props.fetchList()
     }
 
+    
     scrollLeftA = () => {
         document.getElementById('actionScroll').scrollLeft += 1000;
     }
@@ -44,38 +45,47 @@ class HomePage extends React.Component {
         e.currentTarget.children[3].classList.add('hidden')
     }
 
+
     render() {
         if (this.props.videos.length === 0 || Object.values(this.props.genres).length === 0) {
             return null;
-        } else {
+        }  else {
 
-        const { videos, genres } = this.props;
+            let pageVids = [];
+            this.props.videos.forEach((vid) => {
+               
+                if (vid.description + 's' === this.props.match.path.slice(1)) {
+                    pageVids.push(vid)
+                }
+            })
 
-        let action = videos.filter(video => (
-            genres[video.genre_id].name === "Action"
-        ));
+            
+            let action = pageVids.filter(video => (
+                this.props.genres[video.genre_id].name === "Action"
+            ));
+    
+            let comedy = pageVids.filter(video => (
+                this.props.genres[video.genre_id].name === "Comedy"
+            ));
+    
+            let drama = pageVids.filter(video => (
+                this.props.genres[video.genre_id].name === "Drama"
+            ));
 
-        let comedy = videos.filter(video => (
-            genres[video.genre_id].name === "Comedy"
-        ));
-
-        let drama = videos.filter(video => (
-            genres[video.genre_id].name === "Drama"
-        ));
-
-        return (
-            <div className="homePage" >
+            let randVid = Math.floor(Math.random() * Math.floor(pageVids.length-1))
+            return (
+                <div className="typeShowPage">
                     <div className="previewBox">
-                        <video src="https://neatflix-415-dev.s3-us-west-1.amazonaws.com/Videos/WandaVision.mp4" autoPlay muted controls>
+                        <video src={pageVids[randVid].video_url} autoPlay muted controls> 
                         </video>
                     </div>
-                <MyList />
-                
-                <div className="actionContainer"  onMouseOver={this.handleHover} onMouseLeave={this.handleUnhover}>
-                    <p className="genre">Action</p>
+                    <MyList path={this.props.match.path} />
+
+                    <div className="actionContainer"  onMouseOver={this.handleHover} onMouseLeave={this.handleUnhover}>
+                        <p className="genre">Action</p>
                         <div className="action" id="actionScroll" >
                         <div className="pixelSpace" />
-                        {
+                            {
                             action.map((video, i) => (     
                                 <Video clsNameBut="addButton hidden" playButCls="vidPage hidden" muteButCls="muteBut hidden"
                                     src={video.video_url} img={video.photo_url} key={i} action={this.props.addToList} 
@@ -85,8 +95,8 @@ class HomePage extends React.Component {
                         </div>
                         <a className="next hidden" onClick={this.scrollLeftA} >&#10095;</a>
                         <a className="prev hidden" onClick={this.scrollRightA} >&#10094;</a>
-                </div>
-                <div className="comedyContainer" onMouseOver={this.handleHover} onMouseLeave={this.handleUnhover}>
+                    </div>
+                    <div className="comedyContainer" onMouseOver={this.handleHover} onMouseLeave={this.handleUnhover}>
                     <p className="genre" >Comedy</p>
                     
                     <div className="comedy" id="comedyScroll">
@@ -117,14 +127,14 @@ class HomePage extends React.Component {
                     <a className="next hidden" onClick={this.scrollLeftD} >&#10095;</a>
                     <a className="prev hidden" onClick={this.scrollRightD} >&#10094;</a>
                 </div>
-                <div className="logos">
-                    
-                </ div>
-        </div>
-        )
+                <div className="logos"></div>
+            </div>
+            )
+        }
+        
 
-        }  
-    }
+    } 
+
 }
 
-export default HomePage;
+export default TypeShowPage;

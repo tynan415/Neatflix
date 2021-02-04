@@ -5,7 +5,6 @@ import { addToList } from '../../actions/my_list_actions';
 
 
 const mSTP = (state, ownProps) => {
-    console.log(ownProps.match.params.query)
     return {
         videos: Object.values(state.videos),
         search: ownProps.match.params.query

@@ -15,6 +15,8 @@ class NavBar extends React.Component {
         this.handleSearch = this.handleSearch.bind(this);
         this.removeToggle = this.removeToggle.bind(this);
         this.handleHome = this.handleHome.bind(this);
+        this.handleShows = this.handleShows.bind(this);
+        this.handleMovies = this.handleMovies.bind(this);
     }
    
     handleSubmit(e) {
@@ -61,8 +63,14 @@ class NavBar extends React.Component {
     }
 
     handleHome() {
-        // debugger
         this.props.history.push("/browse")
+    }
+
+    handleShows() {
+        this.props.history.push("/shows")
+    }
+    handleMovies() {
+        this.props.history.push("/movies")
     }
 
     handleUpdate(e) {
@@ -77,9 +85,9 @@ class NavBar extends React.Component {
             <div className="navBar" id="navBar" >
                 <div id="logo" onClick={this.handleHome} />
                 <div onClick={this.handleHome} className="homeLink">Home</div>
-                <div className="movieLink">Movies</div>
-                <div className="tvLink">TV Shows</div>
-                <div className="listLink">My List</div>
+                <div className="movieLink" onClick={this.handleMovies} >Movies</div>
+                <div className="tvLink" onClick={this.handleShows} >TV Shows</div>
+                
                 
                 <div className="searchGlass">
                     <div className="search"  onChange={this.handleSearch}>

@@ -7,7 +7,6 @@ export const fetchList = (data) => {
 };
 
 export const addToList = video_id => {
-  // debugger
   return $.ajax({
     method: 'POST',
     url: 'api/my_lists',

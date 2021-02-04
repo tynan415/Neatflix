@@ -29,22 +29,39 @@ class MyList extends React.Component {
     }
 
     render() {
-        let video_ids = [];
         let my_vids = [];
-        if (this.props.myList[0]) {
-            Object.values(this.props.myList).forEach((ele) => {
-                video_ids.push(ele.video_id)
+        let my_shows = [];
+        let my_movies = [];
+        if (!!this.props.myList[0]) {
             
+            Object.values(this.props.myList).forEach((vid) => {
                 if (this.props.videos) {
-                    my_vids.push(this.props.videos[ele.video_id])
+                    my_vids.push(this.props.videos[vid.video_id])
+                    
+                    if (this.props.videos[vid.video_id].description === 'show') {
+                        my_shows.push(this.props.videos[vid.video_id])
+                    } else {
+                        my_movies.push(this.props.videos[vid.video_id])
+                    }
                 }
+                
             })
         }
-        if (this.props.myList[0]) {
+
+        let listName = "My List"
+        if (this.props.path === "/movies") {
+            listName = "My Movies"
+            my_vids = my_movies
+        } else if (this.props.path === "/shows") {
+            listName = "My Shows"
+            my_vids = my_shows
+        }
+
+        if (!!this.props.myList[0]) {
             return (
                 <div className="myListContainer"  onMouseOver={this.handleHover} onMouseLeave={this.handleUnhover} >
                 <div className="myList" id="listScroll" >
-                    <p className="genre" >My List</p>
+                    <p className="genre" >{listName}</p>
                     <div className="pixelSpace" />
                         {
                             my_vids.map((video, i) => (

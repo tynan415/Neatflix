@@ -7,7 +7,6 @@ const videosReducer = (oldState = {}, action) => {
             return action.videos;
         case RECEIVE_VIDEO:
             return Object.assign({}, oldState, {[action.video.id]: action.video});
-            // if action.video.set then we need to Object.assign under correct key
         default:
             return oldState;
     }

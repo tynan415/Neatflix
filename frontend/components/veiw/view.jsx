@@ -6,8 +6,6 @@ class View extends React.Component{
     }
 
     componentDidMount() {
-        // this.props.getVideos()
-        this.props.requestGenres()
         this.props.requestVideo(this.props.match.params.videoId);
     }
 

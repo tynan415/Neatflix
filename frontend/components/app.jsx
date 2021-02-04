@@ -7,7 +7,8 @@ import { AuthRoute,  ProtectedRoute } from '../util/route_utils';
 import HomePageContainer from './home_page/home_page_cont';
 import SearchPage from './search/search_container';
 import NavBarCont from '../components/nav_bar/nav_bar_cont';
-import ViewContainer from '../components/veiw/view_cont'
+import ViewContainer from '../components/veiw/view_cont';
+import TypePageCont from '../components/tv_page/typePage_cont'
 
 const App = () => (
   <>
@@ -16,6 +17,8 @@ const App = () => (
     <AuthRoute path="/signup/:email" component={signup_cont} />
     <ProtectedRoute path="/" component={NavBarCont} />
     <ProtectedRoute exact path="/browse" component={HomePageContainer} />
+    <ProtectedRoute exact path='/shows' component={TypePageCont} />
+    <ProtectedRoute exact path='/movies' component={TypePageCont} />
     <Route path="/search/:query" component={SearchPage} />
     <ProtectedRoute exact path='/browse/:videoId' component={ViewContainer}/>
   </>
